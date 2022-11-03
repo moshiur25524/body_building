@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css'
 import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import Header from './Pages/Shared/Header/Header';
@@ -10,7 +11,7 @@ import Register from './Pages/Register/Register';
 
 function App() {
   return (
-    <div>
+    <div className='App.css'>
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home></Home>}/>
