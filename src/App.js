@@ -7,6 +7,7 @@ import Header from './Pages/Shared/Header/Header';
 import Contact from './Pages/Contact/Contact';
 import Services from './Pages/Services/Services';
 import About from './Pages/About/About';
+import Login from './Pages/Login/Login';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/services' element={<Services/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/about' element={<About/>}/>
+        <Route path='/login' element={<Login/>}/>
 
       </Routes>
     </div>
