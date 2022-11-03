@@ -1,16 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import useServices from '../../hooks/useServices';
 
 const Services = () => {
-    const [services, setServices] = useState([])
-
-    useEffect(()=>{
-        fetch('servicesData.json')
-        .then(res =>res.json)
-        .then(data => setServices(data))
-    },[])
+   const [services, setServices] = useServices()
     return (
         <div>
-            <h1>All the services</h1>
+            <h1 className='text-center'>All the services: {services.length}</h1>
         </div>
     );
 };
