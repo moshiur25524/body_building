@@ -1,6 +1,6 @@
 import { signOut } from 'firebase/auth';
 import React from 'react';
-import { Button, Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar} from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { NavLink } from 'react-router-dom';
 import auth from '../../../firebase.init';
@@ -25,7 +25,7 @@ const Header = () => {
 
                     </Nav>
                     <Nav>
-                        <Nav.Link as={NavLink} to='/'>More deets</Nav.Link>
+                        <Nav.Link>{user && user.displayName}</Nav.Link>
                         {user ?
                             <Button variant="outline-danger" onClick={logout}>SignOut</Button> :
                             <Button as={NavLink} to='/login' variant="outline-primary">Login</Button>
