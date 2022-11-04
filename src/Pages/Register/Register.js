@@ -5,11 +5,15 @@ import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-fi
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { useUpdateProfile } from 'react-firebase-hooks/auth';
+import { useSendEmailVerification } from 'react-firebase-hooks/auth';
 
 const Register = () => {
 
     const [updateProfile, updating] = useUpdateProfile(auth);
     const [displayName, setDisplayName] = useState('');
+
+    const [sendEmailVerification, sending] = useSendEmailVerification(auth);
+    const [email, setEmail] = useState('');
 
     const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
     // const [error, setError] = useState('')
@@ -20,7 +24,7 @@ const Register = () => {
         error
     ] = useCreateUserWithEmailAndPassword(auth);
 
-    const handleRegister = e => {
+    const handleRegister = async e => {
         e.preventDefault()
         const name = e.target.name.value;
         const email = e.target.email.value;
@@ -32,9 +36,13 @@ const Register = () => {
         // }
         // setError('')
         setDisplayName(name)
+        setEmail(email)
         createUserWithEmailAndPassword(email, password)
         console.log(user);
         e.target.reset()
+
+        await sendEmailVerification();
+          alert('Please check your email to verify your email');
     }
 
     const googleSignIn = () => {
@@ -52,7 +60,7 @@ const Register = () => {
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" name='email' placeholder="Enter email" required />
+                    <Form.Control type="email" name='email'  onChange={(e) => setEmail(e.target.value)} placeholder="Enter email" required />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">

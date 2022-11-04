@@ -8,7 +8,7 @@ import auth from '../../firebase.init';
 
 const Login = () => {
 
-// const [error, setError] = useState([])
+    // const [error, setError] = useState([])
 
     const location = useLocation()
     const navigate = useNavigate()
@@ -19,7 +19,7 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [sendPasswordResetEmail, sending, rerror] = useSendPasswordResetEmail(
         auth
-      );
+    );
 
 
     const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
@@ -27,7 +27,7 @@ const Login = () => {
         signInWithEmailAndPassword,
         user,
         loading,
-       error
+        error
     ] = useSignInWithEmailAndPassword(auth);
 
     const googleSignIn = () => {
@@ -73,15 +73,15 @@ const Login = () => {
                 </Form.Group>
 
                 {error && <p className='text-danger'>{error.message}</p>}
-                <Button variant="link"     onClick={async () => {
-          await sendPasswordResetEmail(email);
-          alert('Sent email');
-        }}>Forget Password ?</Button> <br />
+                <Button variant="link" onClick={async () => {
+                    await sendPasswordResetEmail(email);
+                    alert('Sent email');
+                }}>Forget Password ?</Button> <br />
                 <p>New Here? <Link to={'/register'}>Register please</Link></p>
                 <Button variant="primary" type="submit">
                     LOGIN
                 </Button>
-                
+
             </Form>
             <div className="border border-bottom border-2 border-warning my-2"></div> <p className='text-center'>OR</p>
             <div className="border border-bottom border-2 border-warning my-2"></div>
