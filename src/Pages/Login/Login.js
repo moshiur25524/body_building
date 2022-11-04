@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import Loader from '../Shared/Loader/Loader';
 
 
 const Login = () => {
@@ -13,7 +14,7 @@ const Login = () => {
     const location = useLocation()
     const navigate = useNavigate()
 
-    let from = location?.state?.from?.pathname || '/'
+    let from = location.state?.from?.pathname || '/'
 
     // const [validated, setValidated] = useState(false);
     const [email, setEmail] = useState('');
@@ -32,7 +33,6 @@ const Login = () => {
 
     const googleSignIn = () => {
         signInWithGoogle()
-        navigate(from, { replace: true });
         console.log(guser);
     }
 
@@ -48,9 +48,13 @@ const Login = () => {
         // setValidated(true);
 
         signInWithEmailAndPassword(email, password)
-        // navigate(from, { replace: true })
+        // navigate(from, {replace: true})
         e.target.reset()
         console.log(user);
+    }
+
+    if(user || guser){
+        navigate(from, {replace: true});
     }
     return (
         <div className='container w-50 mx-auto mt-5'>
@@ -78,6 +82,9 @@ const Login = () => {
                     alert('Sent email');
                 }}>Forget Password ?</Button> <br />
                 <p>New Here? <Link to={'/register'}>Register please</Link></p>
+                {loading && <Loader></Loader>} <br />
+                {gloading && <p className='highlight'>Loading...</p>}
+                
                 <Button variant="primary" type="submit">
                     LOGIN
                 </Button>

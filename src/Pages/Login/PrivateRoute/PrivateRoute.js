@@ -4,15 +4,15 @@ import { Navigate, useLocation } from 'react-router-dom';
 import auth from '../../../firebase.init';
 
 const PrivateRoute = ({ children }) => {
-    const [user, loading, error] = useAuthState(auth);
+    const [user] = useAuthState(auth);
 
-    const {pathname} = useLocation();
+    const location = useLocation();
+
+    if(!user){
+    return <Navigate to="/login" state={{ from: location }} replace />
+    }
   
-    return user ? (
-      children
-    ) : (
-      <Navigate to="/login" state={{ from: pathname }} replace />
-    );
+    return children;
   };
   
 
