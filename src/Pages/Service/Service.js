@@ -18,9 +18,9 @@ const Service = ({ service }) => {
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <Card.Text>
-                       {description}
+                       {description.slice(0,65)}
                     </Card.Text>
-                    <p class="text-secondary display-4">$ {price}</p>
+                    <p class="text-secondary display-5">$ {price}</p>
                     <Button onClick={()=>handleCheckout(id)} variant="warning">Enroll Now</Button>
                 </Card.Body>
             </Card>
