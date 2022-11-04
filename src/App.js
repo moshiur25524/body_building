@@ -6,8 +6,10 @@ import Header from './Pages/Shared/Header/Header';
 import Contact from './Pages/Contact/Contact';
 import Services from './Pages/Services/Services';
 import About from './Pages/About/About';
+import CheckOut from './Pages/CheckOut/CheckOut';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
+
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
         <Route path='/about' element={<About/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
+        <Route path='/checkout' element={<CheckOut/>}/>
 
       </Routes>
     </div>
