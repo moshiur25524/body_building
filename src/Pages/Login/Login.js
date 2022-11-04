@@ -2,11 +2,16 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 
 const Login = () => {
+
+    const location = useLocation()
+    const navigate = useNavigate()
+
+    let from = location?.state?.from?.pathname || '/'
 
     const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
     const [
@@ -18,6 +23,7 @@ const Login = () => {
 
     const googleSignIn = () => {
         signInWithGoogle()
+        navigate(from, {replace: true});
         console.log(user);
     }
 
@@ -27,6 +33,7 @@ const Login = () => {
         const password = e.target.password.value;
 
         signInWithEmailAndPassword(email, password)
+        navigate(from, {replace: true})
         e.target.reset()
     }
     return (

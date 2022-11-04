@@ -9,6 +9,7 @@ import About from './Pages/About/About';
 import CheckOut from './Pages/CheckOut/CheckOut';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
+import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
         <Route path='/about' element={<About/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
-        <Route path='/checkout' element={<CheckOut/>}/>
+        <Route path='/checkout' element={<PrivateRoute><CheckOut/></PrivateRoute>}/>
 
       </Routes>
     </div>
