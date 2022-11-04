@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 
 const Login = () => {
 
-    // const [error, setError] = useState([])
+// const [error, setError] = useState([])
 
     const location = useLocation()
     const navigate = useNavigate()
@@ -16,19 +16,24 @@ const Login = () => {
     let from = location?.state?.from?.pathname || '/'
 
     // const [validated, setValidated] = useState(false);
+    const [email, setEmail] = useState('');
+    const [sendPasswordResetEmail, sending, rerror] = useSendPasswordResetEmail(
+        auth
+      );
+
 
     const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
     const [
         signInWithEmailAndPassword,
         user,
         loading,
-        error,
+       error
     ] = useSignInWithEmailAndPassword(auth);
 
     const googleSignIn = () => {
         signInWithGoogle()
         navigate(from, { replace: true });
-        console.log(user);
+        console.log(guser);
     }
 
     const handleLogin = e => {
@@ -43,8 +48,9 @@ const Login = () => {
         // setValidated(true);
 
         signInWithEmailAndPassword(email, password)
-        navigate(from, { replace: true })
+        // navigate(from, { replace: true })
         e.target.reset()
+        console.log(user);
     }
     return (
         <div className='container w-50 mx-auto mt-5'>
@@ -52,7 +58,7 @@ const Login = () => {
             <Form onSubmit={handleLogin}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" name='email' placeholder="Enter email" required />
+                    <Form.Control type="email" name='email' onChange={(e) => setEmail(e.target.value)} placeholder="Enter email" required />
                     {/* <Form.Control.Feedback type="invalid">
                         Please provide a valid email address.
                     </Form.Control.Feedback> */}
@@ -65,6 +71,12 @@ const Login = () => {
                         Please provide a valid password.
                     </Form.Control.Feedback> */}
                 </Form.Group>
+
+                {error && <p className='text-danger'>{error.message}</p>}
+                <Button variant="link"     onClick={async () => {
+          await sendPasswordResetEmail(email);
+          alert('Sent email');
+        }}>Forget Password ?</Button> <br />
                 <p>New Here? <Link to={'/register'}>Register please</Link></p>
                 <Button variant="primary" type="submit">
                     LOGIN
