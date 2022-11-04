@@ -18,16 +18,20 @@ function App() {
     <div className='App.css'>
       <Header></Header>
       <Routes>
-        <Route path='/' element={<Home></Home>}/>
-        <Route path='/services' element={<Services/>}/>
-        <Route path='/contact' element={<Contact/>}/>
-        <Route path='/about' element={<PrivateRoute><About/></PrivateRoute>}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/register' element={<Register/>}/>
-        <Route path='/checkout' element={<PrivateRoute><CheckOut/></PrivateRoute>}/>
+        <Route path='/' element={<Home></Home>} />
+        <Route path='/services' element={<Services />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/about' element={<PrivateRoute><About /></PrivateRoute>} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/register' element={<Register />} />
+        <Route path='/checkout/:checkoutId' element={
+          <PrivateRoute>
+            <CheckOut></CheckOut>
+          </PrivateRoute>
+        } />
 
       </Routes>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
