@@ -10,7 +10,7 @@ const Home = () => {
     return (
         <div className='container'>
             <Banner></Banner>
-            <h1 className='text-center text-primary my-2'>Our Services</h1>
+            <h1 className='text-center highlight my-2'>Our Services</h1>
             <div className='service-home'>
                 {
                     slicedServices.map(service => <Service key={service.id} service={service} />)

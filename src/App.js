@@ -10,6 +10,7 @@ import CheckOut from './Pages/CheckOut/CheckOut';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+import Footer from './Pages/Shared/Footer/Footer';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path='/checkout' element={<PrivateRoute><CheckOut/></PrivateRoute>}/>
 
       </Routes>
+      <Footer/>
     </div>
   );
 }

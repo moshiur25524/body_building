@@ -13,7 +13,7 @@ const Service = ({ service }) => {
     }
     return (
         <div className='my-3'>
-            <Card border='warning' style={{ width: '18rem' }}>
+            <Card className='shadow' border='warning' style={{ width: '18rem' }}>
                 <Card.Img variant="top" className='card-image' src={img} />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
@@ -21,7 +21,7 @@ const Service = ({ service }) => {
                        {description}
                     </Card.Text>
                     <p class="text-secondary display-4">$ {price}</p>
-                    <Button onClick={handleCheckout} variant="primary">Enroll Now</Button>
+                    <Button onClick={handleCheckout} variant="warning">Enroll Now</Button>
                 </Card.Body>
             </Card>
         </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
@@ -7,17 +7,24 @@ import auth from '../../firebase.init';
 
 const Register = () => {
     const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
+    // const [error, setError] = useState('')
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
-        error,
+        error
       ] = useCreateUserWithEmailAndPassword(auth);
 
     const handleRegister = e =>{
         e.preventDefault()
         const email = e.target.email.value;
         const password = e.target.password.value;
+
+        // if(!/^(?=.*[A-Z])/.test(password)){
+        //     setError('Password must have at least one Uppercase Character.')
+        //     return 
+        // }
+        // setError('')
         createUserWithEmailAndPassword(email, password)
         e.target.reset()
     }
@@ -42,6 +49,7 @@ const Register = () => {
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group>
+                {error && <p className='text-danger'>{error.message}</p>}
                 <p>Already Have an Account? <Link to={'/login'}>Login please</Link></p>
                 <Button variant="primary" type="submit">
                     REGISTER
