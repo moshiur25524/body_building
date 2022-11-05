@@ -68,11 +68,11 @@
   }
   
   
-  .container {
+  /* .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
-  }
+  } */
   
   .counter {
     font-weight: 400;
@@ -96,8 +96,7 @@
     letter-spacing: 1px;
   } */
   
-  input[type="submit"]:hover,
-  button[type="button"]:hover {
+  input[type="submit"]:hover{
     /* background: #bf1650; */
     color: white;
   }

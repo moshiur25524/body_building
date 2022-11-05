@@ -64,6 +64,7 @@ const Login = () => {
                     await sendPasswordResetEmail(email);
                     alert('Sent email');
                 }}>Forget Password ?</Button> <br />
+                
                 <p>New Here? <Link to={'/register'}>Register please</Link></p>
                 {loading && <Loader></Loader>} <br />
                 {gloading && <p className='highlight'>Loading...</p>}

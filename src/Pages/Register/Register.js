@@ -70,7 +70,7 @@ const Register = () => {
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group>
-                {error && <p className='text-danger'>{error.message}</p>}
+                {error && <p className='text-danger'>{error?.message}</p>}
                 <p>Already Have an Account? <Link to={'/login'}>Login please</Link></p>
                 <Button variant="primary" type="submit">
                     REGISTER

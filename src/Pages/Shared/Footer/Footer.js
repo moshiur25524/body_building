@@ -14,7 +14,9 @@ const Footer = () => {
                             <a
                                 class="btn btn-primary btn-floating m-1"
                                 style={{ backgroundColor: "#3b5998" }}
-                                href="#!"
+                                href="https://facebook.com"
+                                target='_blank'
+                                rel="noreferrer"
                                 role="button"
                             ><i class="fab fa-facebook-f"></i
                             ></a>
@@ -23,7 +25,9 @@ const Footer = () => {
                             <a
                                 class="btn btn-primary btn-floating m-1"
                                 style={{ backgroundColor: "#55acee" }}
-                                href="#!"
+                                href="https://twitter.com"
+                                target='_blank'
+                                rel="noreferrer"
                                 role="button"
                             ><i class="fab fa-twitter"></i
                             ></a>
@@ -32,7 +36,9 @@ const Footer = () => {
                             <a
                                 class="btn btn-primary btn-floating m-1"
                                 style={{ backgroundColor: "#dd4b39" }}
-                                href="#!"
+                                href="https://google.com"
+                                target='_blank'
+                                rel="noreferrer"
                                 role="button"
                             ><i class="fab fa-google"></i
                             ></a>
@@ -41,7 +47,9 @@ const Footer = () => {
                             <a
                                 class="btn btn-primary btn-floating m-1"
                                 style={{ backgroundColor: "#ac2bac" }}
-                                href="#!"
+                                href="https://instagram.com"
+                                target='_blank'
+                                rel="noreferrer"
                                 role="button"
                             ><i class="fab fa-instagram"></i
                             ></a>
@@ -50,7 +58,9 @@ const Footer = () => {
                             <a
                                 class="btn btn-primary btn-floating m-1"
                                 style={{ backgroundColor: "#0082ca" }}
-                                href="#!"
+                                href="https://linkedin.com"
+                                target='_blank'
+                                rel="noreferrer"
                                 role="button"
                             ><i class="fab fa-linkedin-in"></i
                             ></a>
@@ -58,7 +68,9 @@ const Footer = () => {
                             <a
                                 class="btn btn-primary btn-floating m-1"
                                 style={{ backgroundColor: "#333333" }}
-                                href="#!"
+                                href="https://github.com"
+                                target='_blank'
+                                rel="noreferrer"
                                 role="button"
                             ><i class="fab fa-github"></i
                             ></a>
