@@ -1,10 +1,43 @@
-# Getting Started with Create React App
+# BODY BUILDING
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Live Site of [BODY BUILDING](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Main Features
 
-In the project directory, you can run:
+1. Routing the Pages using React Router
+2. Some major components: like as-
+   - Home
+   - Services
+   - About
+   - Contact
+   - Login
+3. In the Header Page:
+   - Banner(Carousel)
+   - 3 Cards of Services
+   - Footer 
+## Core Funtionality of the project
+
+1. Authenticatate User
+2. SignIn and SignOut
+   - Get Email and Password from the registered user
+   - All the input fields are required. Means, without file up none can go forward
+   - Login with Google
+   - Forget Password if any user cannot remember his password
+   - Toggle between Login and Registration
+   - Simply Show error if occur.
+3. Register a user
+   - User name , Email, password is taken for registration.
+   - user is registered with Email verification.
+   - A checkbox implemented. If the checbox is unchecked, the submit button will be disabled.
+4. SignOut button can be seen in the header with the name of user if he logged in
+5. And By clicking SignOut button , the user will be Logged Out.
+6. In the Service Component, if any user click the "Enroll Now" button. He will be redirect to the checkout page. Specific card information can be seen in the checkout page. Main funtionality of CheckOut page -
+   - The Card contains an image, name of service, description, price and a button
+   - It is a Protect page. That means, if any user don't logged in , he will be redirect to the Login page.
+   - When the user is logged in, he will be redirect to the checkOut page.
+   - A form is used using React Hook Form and clicking submit button a succes model can be seen.
+7. Custom Hook is used for Services. In the Home Page 3 card will be shown and the Services page all the card can be seen.
+8. In the Footer copyright symbol and dynamic year are set. 
 
 ### `npm start`
 

@@ -1,4 +1,7 @@
 
+.checkout-header{
+  border-bottom: 2px solid tomato;
+}
   
   .form {
     max-width: 600px;
@@ -83,7 +86,7 @@
     z-index: 9999999;
   }
   
-  button[type="button"] {
+  /* button[type="button"] {
     padding: 5px;
     background: #516391;
     color: white;
@@ -91,11 +94,11 @@
     text-transform: none;
     padding: 10px;
     letter-spacing: 1px;
-  }
+  } */
   
   input[type="submit"]:hover,
   button[type="button"]:hover {
-    background: #bf1650;
+    /* background: #bf1650; */
     color: white;
   }
   
