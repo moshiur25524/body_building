@@ -1,10 +1,19 @@
 import React from 'react';
+import notFoundBackground from "../../../src/assets/404-pages.jpg";
 
 const NotFound = () => {
+    const myStyle={
+        backgroundImage: `url(${notFoundBackground})`,
+        height:'100vh',
+        // marginTop:'-70px',
+        fontSize:'50px',
+        objectFit:'cover',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+    };
     return (
-        <div>
-            <h1>404</h1>
-            <p>The page you are looking for is not found</p>
+        <div className="" style={myStyle}>
+            <h1 className='text-center text-danger display-3 fw-bold'>404</h1>
         </div>
     );
 };

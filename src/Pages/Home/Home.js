@@ -2,6 +2,7 @@ import React from 'react';
 import useServices from '../../hooks/useServices';
 import Service from '../Service/Service';
 import Banner from './Banner/Banner';
+import Experts from './Experts/Experts';
 import './Home.css'
 
 const Home = () => {
@@ -10,12 +11,14 @@ const Home = () => {
     return (
         <div className='container'>
             <Banner></Banner>
-            <h1 className='text-center highlight my-2'>Our Services</h1>
+            <h1 className='text-center highlight my-2 mt-5'>Our Services</h1>
             <div className='service-home'>
                 {
                     slicedServices.map(service => <Service key={service.id} service={service} />)
                 }
             </div>
+            <hr class="border border-danger border-2 opacity-50"></hr>
+            <Experts></Experts>
         </div>
     );
 };

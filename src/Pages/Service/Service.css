@@ -1,6 +1,6 @@
 .card-image {
-    width: 288px; /* You can set the dimensions to whatever you want */
+    /* width: 288px;  */
     height: 188px;
-    object-fit: cover;
+    object-fit: cover; 
 }
 

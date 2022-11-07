@@ -11,6 +11,7 @@ import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Footer from './Pages/Shared/Footer/Footer';
+import NotFound from './Pages/NotFound/NotFound';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             <CheckOut></CheckOut>
           </PrivateRoute>
         } />
+        <Route path='*' element={<NotFound></NotFound>}/>
 
       </Routes>
       <Footer />
