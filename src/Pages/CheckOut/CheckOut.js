@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import MyVerticallyCenteredModel from '../Shared/MyVerticallyCenteredModel/MyVerticallyCenteredModel';
-import './CheckOut.module.css'
+// import './CheckOut.module.css'
 
 const CheckOut = () => {
 

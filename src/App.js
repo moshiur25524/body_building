@@ -13,6 +13,7 @@ import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Footer from './Pages/Shared/Footer/Footer';
 import NotFound from './Pages/NotFound/NotFound';
 import ExpertDetail from './Pages/Home/ExpertDetail/ExpertDetail';
+import CustomForm from './Pages/CustomForm/CustomForm';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
+        <Route path='/customForm' element={<CustomForm />} />
         <Route path='/checkout/:checkoutId' element={
           <PrivateRoute>
             <CheckOut></CheckOut>
