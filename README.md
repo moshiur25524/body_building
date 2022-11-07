@@ -65,9 +65,9 @@ The Responsive of the website is done by two methods. media query and bootstrap.
 
 [![MastHead](https://raw.githubusercontent.com/praveenscience/praveenscience/master/mast.png)](https://praveen.science)
 
-# Hello there! 👋🏻 I am Praveen Kumar! <img src="https://i.imgur.com/veZrcC7.gif" alt="Meaow" width="50" />
+# Hello there! 👋🏻 I am Moshiur Rahman! <img src="https://i.imgur.com/veZrcC7.gif" alt="Meaow" width="50" />
 
-I am Praveen Kumar 🙋🏻‍♂️, a Cook, Cat Lover, Front End Architect, Web Developer Evangelist & Cloud Computing Consultant.
+I am Moshiur Rahman 🙋🏻‍♂️ React Front End Web Developer.
 
 I am a React JS Specialist, a Blockchain Enthusiast, an Author of tech books, a Speaker, a FullStack JavaScript Developer and I hold the top 0.05% Overall position in Stack Overflow.
 
