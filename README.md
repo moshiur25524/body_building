@@ -44,66 +44,60 @@ The Live Site of [BODY BUILDING](https://github.com/facebook/create-react-app).
 The Responsive of the website is done by two methods. media query and bootstrap.
 1. the Services are responsive with the media query
 2. And Expert part are responsive with the bootstrap.
+3. responsiveness will work on mobile, tabl and desktop or laptop devices.
+4. In this Project, services and Experts card will be seen 3 card in a row for large devices, 2 cards in medium device and 1 card in small device.
 
-### `npm start`
+## Dependancies which is used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
+* Bootstrap
+* firebase
+* react-bootstrap
+* react-dom
+* react-firebase-hooks
+* react-hook-form
+* react-router-dom
+* react-scripts 
+* react-slick
+* web-vitals
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+[![MastHead](https://raw.githubusercontent.com/praveenscience/praveenscience/master/mast.png)](https://praveen.science)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Hello there! 👋🏻 I am Praveen Kumar! <img src="https://i.imgur.com/veZrcC7.gif" alt="Meaow" width="50" />
 
-## Learn More
+I am Praveen Kumar 🙋🏻‍♂️, a Cook, Cat Lover, Front End Architect, Web Developer Evangelist & Cloud Computing Consultant.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+I am a React JS Specialist, a Blockchain Enthusiast, an Author of tech books, a Speaker, a FullStack JavaScript Developer and I hold the top 0.05% Overall position in Stack Overflow.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Check out my latest Live Streams on my [YouTube Channel](https://www.youtube.com/praveenscience?sub_confirmation=1). Here are some of my active projects:
 
-### Code Splitting
+[![Praveen's GitHub Activity Graph](https://activity-graph.herokuapp.com/graph?username=praveenscience)](https://git.io/J1Ycx)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+|      Project :octocat:   |     Issues :bug:   | Open PRs :bell:  | Closed PRs :fire:  |
+|-------------|-------------------|---|---|
+| [**DevTernShip**](https://github.com/praveenscience/Internship-LMS-FrontEnd) | [![GitHub issues](https://img.shields.io/github/issues/praveenscience/Internship-LMS-FrontEnd?color=green&logo=github&style=flat)](https://github.com/praveenscience/Internship-LMS-FrontEnd/issues) | [![GitHub PRs](https://img.shields.io/github/issues-pr/praveenscience/Internship-LMS-FrontEnd?style=flat&logo=github)](https://github.com/praveenscience/Internship-LMS-FrontEnd/pulls)  | [![GitHub PRs](https://img.shields.io/github/issues-pr-closed/praveenscience/Internship-LMS-FrontEnd?style=flat&color=critical&logo=github)](https://github.com/praveenscience/Internship-LMS-FrontEnd/pulls?q=is%3Apr+is%3Aclosed)  |
+| [**Hacktoberfest-Project-Ideas**](https://github.com/praveenscience/Hacktoberfest-Project-Ideas/) | [![GitHub issues](https://img.shields.io/github/issues/praveenscience/Hacktoberfest-Project-Ideas?color=green&logo=github&style=flat)](https://github.com/praveenscience/Hacktoberfest-Project-Ideas/issues) | [![GitHub PRs](https://img.shields.io/github/issues-pr/praveenscience/Hacktoberfest-Project-Ideas?style=flat&logo=github)](https://github.com/praveenscience/Hacktoberfest-Project-Ideas/pulls)  | [![GitHub PRs](https://img.shields.io/github/issues-pr-closed/praveenscience/Hacktoberfest-Project-Ideas?style=flat&color=critical&logo=github)](https://github.com/praveenscience/Hacktoberfest-Project-Ideas/pulls?q=is%3Apr+is%3Aclosed)   |
 
-### Analyzing the Bundle Size
+## Connect with Me 🤝🏻
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+[![Website](https://raw.githubusercontent.com/praveenscience/praveenscience/master/soc/ws.svg)](https://praveen.science/) [![Blog](https://raw.githubusercontent.com/praveenscience/praveenscience/master/soc/bl.svg)](https://blog.praveen.science/) [![LinkedIn](https://raw.githubusercontent.com/praveenscience/praveenscience/master/soc/li.svg)](https://uk.linkedin.com/in/praveentech/) [![Twitter](https://raw.githubusercontent.com/praveenscience/praveenscience/master/soc/tw.svg)](https://twitter.com/praveenscience) [![YouTube](https://raw.githubusercontent.com/praveenscience/praveenscience/master/soc/yt.svg)](https://youtube.com/praveenscience) [![Stack Overflow](https://raw.githubusercontent.com/praveenscience/praveenscience/master/soc/so.svg)](https://stackoverflow.com/users/462627/praveen-kumar-purushothaman) [![Stack Exchange](https://raw.githubusercontent.com/praveenscience/praveenscience/master/soc/se.svg)](https://stackexchange.com/users/210807/praveen-kumar) [![Microsoft MVP](https://raw.githubusercontent.com/praveenscience/praveenscience/master/soc/ms.svg)](https://mvp.microsoft.com/en-us/PublicProfile/5001822) [![GitHub](https://raw.githubusercontent.com/praveenscience/praveenscience/master/soc/gh.svg)](https://github.com/praveenscience) [![GitLab](https://raw.githubusercontent.com/praveenscience/praveenscience/master/soc/gl.svg)](https://gitlab.com/praveenscience) [![PayPal](https://raw.githubusercontent.com/praveenscience/praveenscience/master/soc/pp.svg)](https://www.paypal.me/PraveenKumar) [![HackerNews](https://raw.githubusercontent.com/praveenscience/praveenscience/master/soc/hn.svg)](https://news.ycombinator.com/user?id=praveenscience) [![Reddit](https://raw.githubusercontent.com/praveenscience/praveenscience/master/soc/r.svg)](https://reddit.com/u/praveenscience/) [![Facebook](https://raw.githubusercontent.com/praveenscience/praveenscience/master/soc/fb.svg)](https://www.facebook.com/praveenscience) [![Instagram](https://raw.githubusercontent.com/praveenscience/praveenscience/master/soc/ig.svg)](https://instagram.com/praveenscience) [![HackHands](https://raw.githubusercontent.com/praveenscience/praveenscience/master/soc/hh.svg)](http://web.archive.org/web/20190116000030if_/https://hackhands.com/praveen/) [![Telegram](https://raw.githubusercontent.com/praveenscience/praveenscience/master/soc/tg.svg)](https://t.me/praveenscience) [![WhatsApp](https://raw.githubusercontent.com/praveenscience/praveenscience/master/soc/wa.svg)](https://wa.me/)
 
-### Making a Progressive Web App
+### My Badges
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+[![@praveen's Holopin board](https://holopin.me/praveen)](https://holopin.io/@praveen)
 
-### Advanced Configuration
+### Dino 🦖
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+![Dino](https://raw.githubusercontent.com/praveenscience/praveenscience/master/dino.gif)
 
-### Deployment
+| ![Praveen GitHub Statistics](https://github-readme-stats.vercel.app/api?username=praveenscience&show_icons=true) | ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=praveenscience) |
+| --- | --- |
+| ![Praveen GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=praveenscience) | If you like what I do, support me by buying me a [pizza](https://www.buymeacoffee.com/praveenscience) and let's do more useful content! <img src="https://i.imgur.com/T31KN5a.png" alt="Look next line." height="24" /><br /><br /> <a href="https://www.buymeacoffee.com/praveenscience" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-white.png" alt="Buy Me A Pizza" width="120" /></a> |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+![Trophies 🏆](https://github-profile-trophy.vercel.app/?username=praveenscience)
 
-### `npm run build` fails to minify
+Watch my contribution graph being eaten by a Snake! 🐍
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Watch my contribution graph being eaten by a Snake!](https://raw.githubusercontent.com/praveenscience/praveenscience/master/soc/snake.svg)
