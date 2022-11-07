@@ -4,17 +4,19 @@ The Live Site of [BODY BUILDING](https://github.com/facebook/create-react-app).
 
 ## Main Features
 
-1. Routing the Pages using React Router
-2. Some major components: like as-
+```diff
+-1. Routing the Pages using React Router
+-2. Some major components: like as-
    - Home
    - Services
    - About
    - Contact
    - Login
-3. In the Header Page:
+-3. In the Header Page:
    - Banner(Carousel)
    - 3 Cards of Services
    - Footer 
+```
 ## Core Funtionality of the project
 
 1. Authenticatate User
