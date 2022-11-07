@@ -12,6 +12,7 @@ import Register from './Pages/Register/Register';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Footer from './Pages/Shared/Footer/Footer';
 import NotFound from './Pages/NotFound/NotFound';
+import ExpertDetail from './Pages/Home/ExpertDetail/ExpertDetail';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
             <CheckOut></CheckOut>
           </PrivateRoute>
         } />
+        <Route path='/expert/:expertId' element={<ExpertDetail></ExpertDetail>}/>
         <Route path='*' element={<NotFound></NotFound>}/>
 
       </Routes>

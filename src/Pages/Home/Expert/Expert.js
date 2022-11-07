@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Expert = ({ expert }) => {
     const { id, name, img } = expert;
@@ -9,7 +10,7 @@ const Expert = ({ expert }) => {
                 <div class="card-body">
                     <h5 class="card-title">{name}</h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <Link to={`/expert/${id}`} class="btn btn-primary">Know More</Link>
                 </div>
             </div>
         </div>
