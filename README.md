@@ -101,3 +101,11 @@ I am a React JS Specialist, a Blockchain Enthusiast, an Author of tech books, a 
 Watch my contribution graph being eaten by a Snake! 🐍
 
 ![Watch my contribution graph being eaten by a Snake!](https://raw.githubusercontent.com/praveenscience/praveenscience/master/soc/snake.svg)
+
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+```
