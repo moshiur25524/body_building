@@ -39,6 +39,12 @@ The Live Site of [BODY BUILDING](https://github.com/facebook/create-react-app).
 7. Custom Hook is used for Services. In the Home Page 3 card will be shown and the Services page all the card can be seen.
 8. In the Footer copyright symbol and dynamic year are set. 
 
+## Fully Responsive
+
+The Responsive of the website is done by two methods. media query and bootstrap.
+1. the Services are responsive with the media query
+2. And Expert part are responsive with the bootstrap.
+
 ### `npm start`
 
 Runs the app in the development mode.\
