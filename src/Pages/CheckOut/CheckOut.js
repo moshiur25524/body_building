@@ -22,7 +22,7 @@ const CheckOut = () => {
             <h1 className='text-center highlight my-5 checkout-header'>Checkout Service</h1>
             <div>
                 <div>
-                    <form className='form' onSubmit={handleSubmit(onSubmit)}>
+                    <form className='form-field' onSubmit={handleSubmit(onSubmit)}>
 
                         <input type="text" placeholder="First name" {...register("First name", { required: true, maxLength: 80 })} />
 

@@ -5,6 +5,7 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWith
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loader from '../Shared/Loader/Loader';
+import SocialLogin from './SocialLogin/SocialLogin';
 
 
 const Login = () => {
@@ -24,7 +25,6 @@ const Login = () => {
         loading,
         error
     ] = useSignInWithEmailAndPassword(auth);
-    const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
 
     const handleLogin = e => {
         e.preventDefault()
@@ -36,13 +36,7 @@ const Login = () => {
         console.log(user);
     }
 
-
-    const googleSignIn = () => {
-        signInWithGoogle()
-        console.log(guser);
-    }
-
-    if (user || guser) {
+    if (user) {
         navigate(from, { replace: true });
     }
     return (
@@ -67,20 +61,14 @@ const Login = () => {
                 
                 <p>New Here? <Link to={'/register'}>Register please</Link></p>
                 {loading && <Loader></Loader>} <br />
-                {gloading && <p className='highlight'>Loading...</p>}
+                {/* {gloading && <p className='highlight'>Loading...</p>} */}
 
                 <Button variant="primary" type="submit">
                     LOGIN
                 </Button>
 
             </Form>
-            <div className="border border-bottom border-2 border-warning my-2"></div> <p className='text-center'>OR</p>
-            <div className="border border-bottom border-2 border-warning my-2"></div>
-            <div className="d-grid gap-2">
-                <Button onClick={googleSignIn} variant="outline-info" size="md">
-                    Google Login
-                </Button>
-            </div>
+            <SocialLogin></SocialLogin>
         </div>
     );
 };

@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useSendEmailVerification } from 'react-firebase-hooks/auth';
+import SocialLogin from '../Login/SocialLogin/SocialLogin';
 
 const Register = () => {
 
@@ -84,13 +85,7 @@ const Register = () => {
                     Update profile
                 </Button>
             </Form>
-            <div className="border border-bottom border-2 border-warning my-2"></div> <p className='text-center'>OR</p>
-            <div className="border border-bottom border-2 border-warning my-2"></div>
-            <div className="d-grid gap-2">
-                <Button onClick={googleSignIn} variant="outline-info" size="md">
-                    Google Login
-                </Button>
-            </div>
+            <SocialLogin></SocialLogin>
         </div>
     );
 };
