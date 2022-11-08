@@ -6,6 +6,8 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loader from '../Shared/Loader/Loader';
 import SocialLogin from './SocialLogin/SocialLogin';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Login = () => {
@@ -37,18 +39,24 @@ const Login = () => {
         e.target.reset()
     }
 
+    if(loading || sending){
+        return (
+            <Loader></Loader>
+        )
+    }
+
     if (user) {
         navigate(from, { replace: true });
         console.log(user);
     }
 
-    const resetPassword = async () => {
+    const resetPassword = async() => {
         const email = emailRef.current.value;
         if (email) {
             await sendPasswordResetEmail(email);
-            alert("Sent email");
+            toast("Sent email");
         } else {
-            alert("Please enter your email");
+            toast("Please enter your email");
         }
     };
     return (
@@ -57,7 +65,7 @@ const Login = () => {
             <Form onSubmit={handleLogin}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" name='email' placeholder="Enter email" required />
+                    <Form.Control ref={emailRef} type="email" name='email' placeholder="Enter email" required />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -69,7 +77,7 @@ const Login = () => {
                     LOGIN
                 </Button>
 
-                {error && <p className='text-danger'>{error.message}</p>}
+                {error && <p className='text-danger'>{error?.message}</p>}
                 <Button variant="link" className='text-decoration-none' onClick={resetPassword}>Forget Password ?</Button> <br />
 
                 <p>New Here? <Link className='text-decoration-none' to={'/register'}>Register please</Link></p>
@@ -78,6 +86,7 @@ const Login = () => {
 
             </Form>
             <SocialLogin></SocialLogin>
+            <ToastContainer />
         </div>
     );
 };

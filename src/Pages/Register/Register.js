@@ -5,27 +5,29 @@ import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { useUpdateProfile } from 'react-firebase-hooks/auth';
-import { useSendEmailVerification } from 'react-firebase-hooks/auth';
 import SocialLogin from '../Login/SocialLogin/SocialLogin';
+import Loader from '../Shared/Loader/Loader';
 
 const Register = () => {
 
     const navigate = useNavigate()
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
-    // const [displayName, setDisplayName] = useState('');
     const [agree, setAgree] = useState(false)
-
-    // const [sendEmailVerification, sending] = useSendEmailVerification(auth);
-    const [email, setEmail] = useState('');
 
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error
-    ] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification: true});
+    ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
 
-    if(user){
+    if (loading || updating) {
+        return (
+            <Loader></Loader>
+        )
+    }
+
+    if (user) {
         console.log(user);
         navigate('/')
     }
@@ -42,11 +44,10 @@ const Register = () => {
         //     e.target.reset()
         // }
 
-         await createUserWithEmailAndPassword(email, password)
-         await updateProfile({ displayName: name});
-         console.log('Updated profile');
+        await createUserWithEmailAndPassword(email, password)
+        await updateProfile({ displayName: name });
 
-            e.target.reset()
+        e.target.reset()
 
         // if(!/^(?=.*[A-Z])/.test(password)){
         //     setError('Password must have at least one Uppercase Character.')
@@ -54,8 +55,6 @@ const Register = () => {
         // }
         // setError('')
 
-        // setDisplayName(name)
-        setEmail(email)
 
     }
 
@@ -70,7 +69,7 @@ const Register = () => {
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" name='email' onChange={(e) => setEmail(e.target.value)} placeholder="Enter email" required />
+                    <Form.Control type="email" name='email' placeholder="Enter email" required />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -78,7 +77,7 @@ const Register = () => {
                     <Form.Control type="password" name='password' placeholder="Password" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check onClick={()=>setAgree(!agree)} className={agree ? 'text-success':'text-danger'} type="checkbox" name='terms' label="Accept Body Building Terms and Condition" />
+                    <Form.Check onClick={() => setAgree(!agree)} className={agree ? 'text-success' : 'text-danger'} type="checkbox" name='terms' label="Accept Body Building Terms and Condition" />
                 </Form.Group>
                 {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check onClick={() => setAgree(!agree)} className={`ps-2 ${!agree && 'text-danger'}`} type="checkbox" name='terms' label="Accept Body Building Terms and Condition" />
