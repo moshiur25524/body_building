@@ -19,10 +19,12 @@ const SocialLogin = () => {
         navigate(from, { replace: true });
     }
 
+    let errorElement;
+
     if (error) {
-        return (
+       errorElement = (
             <div>
-                <p className='text-danger'>error: {error?.message}</p>
+                <p className='text-danger'>{error?.message}</p>
             </div>)
     }
 
@@ -36,6 +38,9 @@ const SocialLogin = () => {
         <div>
             <div className="border border-bottom border-2 border-warning my-2"></div> <p className='text-center'>OR</p>
             <div className="border border-bottom border-2 border-warning my-2"></div>
+            
+            <p className='text-danger'>{errorElement}</p>
+
             <div className="d-grid gap-2">
                 <Button onClick={googleSignIn} variant="outline-info" size="md">
                     <i class="fab fa-google"></i> Google Login
