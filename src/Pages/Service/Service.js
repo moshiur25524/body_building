@@ -22,6 +22,7 @@ const Service = ({ service }) => {
                     </Card.Text>
                     <p class="text-secondary display-5">$ {price}</p>
                     <Button onClick={()=>handleCheckout(id)} variant="warning">Enroll Now</Button>
+                   
                 </Card.Body>
             </Card>
         </div>

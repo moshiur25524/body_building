@@ -79,7 +79,7 @@ const Footer = () => {
                     </div>
 
                     <div class="text-center p-3" style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-                        &copy; 2020 - {new Date().getFullYear()} Copyright:
+                        &copy; 1999 - {new Date().getFullYear()} Copyright:
                         <a class="text-white" href="https://mdbootstrap.com/">Sayma Rahman</a>
                     </div>
                 </footer>

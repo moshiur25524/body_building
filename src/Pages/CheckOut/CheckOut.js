@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
+import auth from '../../firebase.init';
 import MyVerticallyCenteredModel from '../Shared/MyVerticallyCenteredModel/MyVerticallyCenteredModel';
 // import './CheckOut.module.css'
 
@@ -7,6 +9,7 @@ const CheckOut = () => {
 
     // const [service , setService] = useState({})
 
+    const [user, loading, error] = useAuthState(auth);
     const [modalShow, setModalShow] = React.useState(false);
     const { register, reset, formState, formState: { isSubmitSuccessful }, handleSubmit, formState: { errors } } = useForm();
 
@@ -30,7 +33,7 @@ const CheckOut = () => {
 
                         <input type="text" placeholder="Present Address" {...register("Present Address", { required: true, maxLength: 500 })} />
 
-                        <input type="email" placeholder="Email" {...register("Email", { required: true, pattern: /^\S+@\S+$/i })} />
+                        <input type="email" value={user?.email} readOnly placeholder="Email" {...register("Email", { required: true, pattern: /^\S+@\S+$/i })} />
 
                         <input type="tel" placeholder="Mobile number" {...register("Mobile number", { required: true, minLength: 6, maxLength: 12 })} />
 
