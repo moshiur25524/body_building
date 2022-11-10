@@ -1,6 +1,6 @@
 # BODY BUILDING
 
-The Live Site of [BODY BUILDING](https://github.com/facebook/create-react-app).
+The Live Site of [BODY BUILDING](https://body-building-4bc2b.web.app/).
 
 ## Main Features
 
@@ -69,6 +69,10 @@ The Responsive of the website is done by two methods. media query and bootstrap.
 ## Secure Code in the github
 
 * firebase config codes are secure. The information of firebase.init.js file's information cannot be seen in github. It is secured by creating a file named **.env.local** 
+
+## Project Deploy
+
+* The body building project is deployed through firebase.You will see the live site in the top of this readme file.
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
