@@ -3,6 +3,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import auth from '../../firebase.init';
 import MyVerticallyCenteredModel from '../Shared/MyVerticallyCenteredModel/MyVerticallyCenteredModel';
+import PageTitle from '../Shared/PageTitle/PageTitle';
 // import './CheckOut.module.css'
 
 const CheckOut = () => {
@@ -22,6 +23,7 @@ const CheckOut = () => {
     console.log(errors);
     return (
         <div className='container'>
+            <PageTitle title='Checkout'></PageTitle>
             <h1 className='text-center highlight my-5 checkout-header'>Checkout Service</h1>
             <div>
                 <div>

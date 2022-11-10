@@ -7,6 +7,7 @@ import auth from '../../firebase.init';
 import { useUpdateProfile } from 'react-firebase-hooks/auth';
 import SocialLogin from '../Login/SocialLogin/SocialLogin';
 import Loader from '../Shared/Loader/Loader';
+import PageTitle from '../Shared/PageTitle/PageTitle';
 
 const Register = () => {
 
@@ -60,6 +61,7 @@ const Register = () => {
 
     return (
         <div className='container w-50 mx-auto mt-5'>
+            <PageTitle title='Register'></PageTitle>
             <h1 className='text-center text-primary'>REGISTER </h1>
             <Form onSubmit={handleRegister}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">

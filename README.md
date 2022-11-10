@@ -66,10 +66,12 @@ The Responsive of the website is done by two methods. media query and bootstrap.
 ▶️ react-slick
 ▶️ web-vitals
 
+## Secure Code in the github
+
+* firebase config codes are secure. The information of firebase.init.js file's information cannot be seen in github. It is secured by creating a file named **.env.local** 
+
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-
-[![MastHead](https://raw.githubusercontent.com/praveenscience/praveenscience/master/mast.png)](https://praveen.science)
 
 # Hello there! 👋🏻 I am Moshiur Rahman! <img src="https://i.imgur.com/veZrcC7.gif" alt="Meaow" width="50" />
 
