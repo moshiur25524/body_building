@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Helmet } from 'react-helmet-async';
+import GoogleMap from '../Shared/GoogleMap/GoogleMap';
 
 const Contact = () => {
 
@@ -28,6 +29,7 @@ const Contact = () => {
             <Helmet>
                 <title>Contact - Body Building</title>
             </Helmet>
+            <GoogleMap></GoogleMap>
             <h1 className='highlight text-center'>Contact Page</h1>
             <Form onSubmit={handleRefSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">

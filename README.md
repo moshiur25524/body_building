@@ -55,13 +55,16 @@ The Responsive of the website is done by two methods. media query and bootstrap.
 
 ## Dependancies which is used
 
-▶️ Bootstrap
 ▶️ firebase
+▶️ react-firebase-hooks
+▶️ Bootstrap
 ▶️ react-bootstrap
 ▶️ react-dom
-▶️ react-firebase-hooks
-▶️ react-hook-form
 ▶️ react-router-dom
+▶️ react-hook-form
+▶️ react-leaflet
+▶️ react-toastify
+▶️ react-helmet-async
 ▶️ react-scripts 
 ▶️ react-slick
 ▶️ web-vitals
