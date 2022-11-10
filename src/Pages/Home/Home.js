@@ -21,7 +21,7 @@ const Home = () => {
                     slicedServices.map(service => <Service key={service.id} service={service} />)
                 }
             </div>
-            <hr class="border border-danger border-2 opacity-50"></hr>
+            <hr className="border border-danger border-2 opacity-50"></hr>
             <Experts></Experts>
         </div>
     );

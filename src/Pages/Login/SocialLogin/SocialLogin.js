@@ -43,13 +43,13 @@ const SocialLogin = () => {
 
             <div className="d-grid gap-2">
                 <Button onClick={googleSignIn} variant="outline-info" size="md">
-                    <i class="fab fa-google"></i> Google Login
+                    <i className="fab fa-google"></i> Google Login
                 </Button>
                 <Button onClick={googleSignIn} variant="outline-primary" size="md">
-                    <i class="fab fa-facebook"></i> Facebook Login
+                    <i className="fab fa-facebook"></i> Facebook Login
                 </Button>
                 <Button onClick={googleSignIn} variant="outline-secondary" size="md">
-                    <i class="fab fa-github"></i> github Login
+                    <i className="fab fa-github"></i> github Login
                 </Button>
             </div>
         </div>
