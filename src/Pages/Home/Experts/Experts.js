@@ -1,11 +1,11 @@
 import React from 'react';
 import Expert from '../Expert/Expert'
 import image1 from '../../../assets/experts/expert-1.jpg'
-import image2 from '../../../assets/experts/expert-2.jpg'
+import image2 from '../../../assets/experts/expert-2.png'
 import image3 from '../../../assets/experts/expert-3.jpg'
 import image4 from '../../../assets/experts/expert-4.jpg'
 import image5 from '../../../assets/experts/expert-5.jpg'
-import image6 from '../../../assets/experts/expert-6.png'
+import image6 from '../../../assets/experts/expert-6.jpg'
 
 const Experts = () => {
     const experts = [

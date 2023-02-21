@@ -5,7 +5,7 @@ import './CustomForm.css'
 const CustomForm = () => {
     return (
         <div className='form-field'>
-            <h1 className='text-center highlight'>Get User Information</h1>
+            <h1 className='text-center highlight'>Join Us</h1>
             <form action="">
                 <PageTitle title='Form'></PageTitle>
                 <input type="text" name="name" placeholder='Your Nice Name' id="" /> <br />
