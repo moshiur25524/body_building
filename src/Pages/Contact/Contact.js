@@ -29,7 +29,7 @@ const Contact = () => {
             <Helmet>
                 <title>Contact - Body Building</title>
             </Helmet>
-            <GoogleMap></GoogleMap>
+            {/* <GoogleMap></GoogleMap> */}
             <h1 className='highlight text-center'>Contact Page</h1>
             <Form onSubmit={handleRefSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
